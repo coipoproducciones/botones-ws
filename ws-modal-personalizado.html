@@ -3,3 +3,147 @@
 <!--IMPORTANTE - LEER--->
 <!---El Javascript utilizado se encuentra en nuestro hosting, puedes usarlo así, pero te recomendamos tenerlo localmente en tu web, para así evitar posibles conflictos.
 Para ello, copia el "src" de la etiqueta script al final del body y copialo en un archivo personalizado en tu hosting--->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.body-ws { font-family: Montserrat;}
+/*---Color de ícono de whatsapp--*/
+.icon-ws {color: #fff;}
+/*--Botón fotante de whatsapp--*/
+.button-ws {
+    padding: 13px 15px 13px;
+    border: none !important;
+    cursor: pointer;
+    /*--color de fondo--*/
+    background: rgb(45, 163, 9);
+    color: #fff;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 40px;
+    bottom: 20px;
+    /*---Duración de la transición--*/
+    transition: ease-in-out 0.3s;
+}
+.button-ws:hover {
+    transform: translate(0px, -10px);
+    transition: ease-in-out 0.3s;
+}
+.title h2  {margin: 0 !important;}
+.title p  {margin: 0 !important;}
+.title {
+    /*--Fondo del título---*/
+    background: rgb(45, 163, 9);
+    color: #fff;
+    padding: 5px 15px 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.content {
+    padding: 25px 15px 10px;
+    color: #fff;
+}
+.agente-ws i {padding-right: 10px;}
+/*--Botones agentes--*/
+.agente-ws button {
+    color: #164466;
+    text-decoration: none !important;
+    background: #fff;
+    padding: 10px 10px 10px;
+    border-radius: 15px;
+    width: 100%;
+    border: none !important;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+/*--Botón para cerrar modal--*/
+.cerrar-modal button{
+    color: #164466;
+    text-decoration: none !important;
+    background: #fff;
+    padding: 4px;
+    border-radius: 15px;
+    width: 20%;
+    margin-left: 40%;
+    border: none !important;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+/*---Para coultar el botón de whatsapp al abrir el modal--*/
+.show-ws {
+    opacity: 0;
+    visibility: hidden !important;
+    pointer-events: auto;
+    margin-bottom: 40px !important;
+    transition: all ease-in-out 0.6s;
+}
+/*--Estilos modal---*/
+.modal {
+    visibility: hidden;
+    position: absolute;
+    background: rgb(179, 179, 179);
+    border-radius: 15px;
+    right: 0;
+    bottom: 0;
+    margin-right: 15px;
+    margin-bottom: 80px;
+    opacity: 0;
+    transition: all ease-in-out 0.6s;
+}
+/*---Para mostrar el modal--*/
+.show {
+    opacity: 1;
+    visibility: visible !important;
+    pointer-events: auto;
+    margin-bottom: 40px !important;
+    transition: all ease-in-out 0.6s;
+}
+/*--Estilos input--*/
+.content p {color: #164466;}
+.p-ws {
+    margin: 0 !important;
+    padding-bottom: 10px;
+}
+.idcp {
+    border: none !important;
+    outline: none !important;
+    width: 100%;
+    padding: 2px 5px 2px;
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 15px;
+    height: 38px;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+			function setDLCP() {
+				var dlCP = " https://wa.me/56990099697?text=" + document.getElementById('idcontenido').value;
+				window.open(dlCP);
+            }
+            
+            $(document).ready(function() {
+            $('#irbtn').click(function() {
+            $('input[type="text"]').val('');
+  		});
+	    });
+	</script>
+</head>
+<body class="body-ws">
+    <button id="abrir" class="button-ws"><i class="fab fa-whatsapp icon-ws fa-2x"></i></button>
+    <div class="modal" id="modal_contenedor">
+            <div class="title">
+            <h2>Comunícate con nosotros.</h2>
+            <p>Estamos para ayudarte...</p></div>
+            <div class="content">
+            <p class="p-ws">Escribe tu mensaje...</p>
+            <div><input placeholder="Hola, me interesa..." class="idcp" id="idcontenido" type="text" name="idcontenido"></div>
+            <div class="agente-ws"><button id="irbtn" type="button" onclick="setDLCP()" >Contactarme</button></div>
+            </div>
+            <div class="cerrar-modal"><button id="cerrar"><i class="fa-lq fas fa-times"></i></i></button></div>
+    </div>
+    <script src="https://contenidos.coipomedia.com/cdn/proyectos/js/whatsapp-flotante-texto.js"></script>
+</body>
