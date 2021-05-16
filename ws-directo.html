@@ -1,0 +1,40 @@
+<!---Desarrollado por Coipo Producciones--->
+<!---Ver demo en dev.coipomedia.com/desarrollo/btn-whatsapp/demos.html--->
+<style>
+.icon-ws {
+    color: #fff;
+}
+.p-btn-ws {
+    display: none;
+}
+.button-ws {
+    padding: 13px 15px 13px;
+    font-size: 16px;
+    border: none !important;
+    cursor: pointer;
+    background: rgb(45, 163, 9);
+    color: #fff;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 40px;
+    bottom: 20px;
+    transition: ease-in-out 0.3s;
+}
+.button-ws:hover {
+    transform: translate(0px, -10px);
+    transition: ease-in-out 0.3s;
+}
+</style>
+<!---BTN---->
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+    <!---Reemplazar [numero] por tu número de WhatsApp ej:56990009697--->
+        <button class="button-ws" onclick="window.location.href='https://wa.me/[numero]'"><i class="fab fa-whatsapp icon-ws fa-2x"></i></button>
+    </div>
+</body>
