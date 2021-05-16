@@ -4,6 +4,20 @@
 <!---El Javascript utilizado se encuentra en nuestro hosting, puedes usarlo así, pero te recomendamos tenerlo localmente en tu web, para así evitar posibles conflictos.
 Para ello, copia el "src" de la etiqueta script al final del body y copialo en un archivo personalizado en tu hosting--->
 <style>
+@media (max-width: 768px) {
+    .modal {
+        width: 100% !important;
+        margin-bottom: 0px !important;
+        margin-right: 0px !important;
+        border-radius: 0px !important;
+        border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    margin-bottom: 0px !important;
+    }
+    .show {
+    margin-bottom: 0px !important;
+}
+}
   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 .body-ws { font-family: Montserrat;}
 /*---Color de ícono de whatsapp--*/
@@ -74,7 +88,7 @@ Para ello, copia el "src" de la etiqueta script al final del body y copialo en u
     opacity: 0;
     visibility: hidden !important;
     pointer-events: auto;
-    margin-bottom: 40px !important;
+    margin-bottom: 40px ;
     transition: all ease-in-out 0.6s;
 }
 /*--Estilos modal---*/
@@ -95,7 +109,7 @@ Para ello, copia el "src" de la etiqueta script al final del body y copialo en u
     opacity: 1;
     visibility: visible !important;
     pointer-events: auto;
-    margin-bottom: 40px !important;
+    margin-bottom: 40px;
     transition: all ease-in-out 0.6s;
 }
 /*--Estilos input--*/
@@ -116,12 +130,13 @@ Para ello, copia el "src" de la etiqueta script al final del body y copialo en u
 }
 </style>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <script>
 			function setDLCP() {
-				var dlCP = " https://wa.me/56990099697?text=" + document.getElementById('idcontenido').value;
+				var dlCP = " https://wa.me/[numero]" + document.getElementById('idcontenido').value;
 				window.open(dlCP);
             }
             
@@ -141,7 +156,7 @@ Para ello, copia el "src" de la etiqueta script al final del body y copialo en u
             <div class="content">
             <p class="p-ws">Escribe tu mensaje...</p>
             <div><input placeholder="Hola, me interesa..." class="idcp" id="idcontenido" type="text" name="idcontenido"></div>
-            <div class="agente-ws"><button id="irbtn" type="button" onclick="setDLCP()" >Contactarme</button></div>
+            <div class="agente-ws"><button id="irbtn" type="button" onclick="setDLCP()" >Contactarse</button></div>
             </div>
             <div class="cerrar-modal"><button id="cerrar"><i class="fa-lq fas fa-times"></i></i></button></div>
     </div>
