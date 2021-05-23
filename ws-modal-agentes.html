@@ -3,135 +3,22 @@
 <!--IMPORTANTE - LEER--->
 <!---El Javascript utilizado se encuentra en nuestro hosting, puedes usarlo así, pero te recomendamos tenerlo localmente en tu web, para así evitar posibles conflictos.
 Para ello, copia el "src" de la etiqueta script al final del body y copialo en un archivo personalizado en tu hosting--->
-<style>
-    button {
-    outline: none !important;
-}
-@media (max-width: 768px) {
-    .modal {
-        width: 100% !important;
-        margin-bottom: 0px !important;
-        margin-right: 0px !important;
-        border-radius: 0px !important;
-        border-top-left-radius: 15px !important;
-    border-top-right-radius: 15px !important;
-    }
-    .show {
-    margin-bottom: 0px !important;
-}
-}
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-.body-ws { font-family: Montserrat;}
-/*---Color de ícono de whatsapp--*/
-.icon-ws {color: #fff;}
-/*--Botón fotante de whatsapp--*/
-.button-ws {
-    padding: 13px 15px 13px;
-    border: none !important;
-    cursor: pointer;
-    /*--color de fondo--*/
-    background: rgb(45, 163, 9);
-    color: #fff;
-    border-radius: 100%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin-right: 40px;
-    bottom: 20px;
-    /*---Duración de la transición--*/
-    transition: ease-in-out 0.3s;
-}
-.button-ws:hover {
-    transform: translate(0px, -10px);
-    transition: ease-in-out 0.3s;
-}
-.title h2  {margin: 0 !important;}
-.title p  {margin: 0 !important;}
-.title {
-    /*--Fondo del título---*/
-    background: rgb(45, 163, 9);
-    color: #fff;
-    padding: 5px 15px 10px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-.content {
-    padding: 25px 15px 10px;
-    color: #fff;
-}
-.agente-ws i {padding-right: 10px;}
-/*--Botones agentes--*/
-.agente-ws button {
-    color: #164466;
-    text-decoration: none !important;
-    background: #fff;
-    padding: 10px 10px 10px;
-    border-radius: 15px;
-    width: 100%;
-    border: none !important;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-/*--Botón para cerrar modal--*/
-.cerrar-modal button{
-    color: #164466;
-    text-decoration: none !important;
-    background: #fff;
-    padding: 4px;
-    border-radius: 15px;
-    width: 20%;
-    margin-left: 40%;
-    border: none !important;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-/*---Para coultar el botón de whatsapp al abrir el modal--*/
-.show-ws {
-    opacity: 0;
-    visibility: hidden !important;
-    pointer-events: auto;
-    margin-bottom: 40px !important;
-    transition: all ease-in-out 0.6s;
-}
-/*--Estilos modal---*/
-.modal {
-    visibility: hidden;
-    position: absolute;
-    background: rgb(179, 179, 179);
-    border-radius: 15px;
-    right: 0;
-    bottom: 0;
-    margin-right: 15px;
-    margin-bottom: 80px;
-    opacity: 0;
-    transition: all ease-in-out 0.6s;
-}
-/*---Para mostrar el modal--*/
-.show {
-    opacity: 1;
-    visibility: visible !important;
-    pointer-events: auto;
-    margin-bottom: 40px;
-    transition: all ease-in-out 0.6s;
-}
-</style>
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://contenidos.coipomedia.com/cdn/proyectos/css/btn-wa-agentes.css">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 </head>
 <body class="body-ws">
-    <button id="abrir" class="button-ws"><i class="fab fa-whatsapp icon-ws fa-2x"></i></button>
-    <div class="modal" id="modal_contenedor">
-            <div class="title">
-            <h2>Comunícate con nosotros.</h2>
-            <p>Estamos para ayudarte...</p></div>
-            <div class="content">
-            <div class="agente-ws"><button onclick="window.location.href='https://wa.me/[numero]'"><i class="fa-lg fas fa-hand-point-right icon-agente"></i><b>Agente 1</b></button></div>
-            <div class="agente-ws"><button onclick="window.location.href='https://wa.me/[numero]'"><i class="fa-lg fas fa-hand-point-right icon-agente"></i><b>Agente 2</b></button></div>
-            <div class="agente-ws"><button onclick="window.location.href='https://wa.me/[numero]'"><i class="fa-lg fas fa-hand-point-right icon-agente"></i><b>Agente 3</b></button></div>
-            </div>
-            <div class="cerrar-modal"><button id="cerrar"><i class="fa-lq fas fa-times"></i></i></button></div>
-    </div>
-    <script src="https://contenidos.coipomedia.com/cdn/proyectos/js/whatsapp-flotante-agentes.js"></script>
+    <button id="abrir" style=" position: fixed !important; bottom: 40px; right: 40px;" class="button-ws"><i class="fab fa-whatsapp icon-ws fa-2x"></i></button>
+        <div class="modal" id="modal_contenedor">
+                <div class="title">
+                <h2>Comunícate con nosotros.</h2>
+                <p>Estamos para ayudarte...</p></div>
+                <div class="content">
+                <div class="agente-ws"><button onclick="window.location.href='https://wa.me/[numero]'"><i class="fa-lg fas fa-hand-point-right icon-agente"></i><b>Agente 1</b></button></div>
+                <div class="agente-ws"><button onclick="window.location.href='https://wa.me/[numero]'"><i class="fa-lg fas fa-hand-point-right icon-agente"></i><b>Agente 2</b></button></div>
+                <div class="agente-ws"><button onclick="window.location.href='https://wa.me/[numero]'"><i class="fa-lg fas fa-hand-point-right icon-agente"></i><b>Agente 3</b></button></div>
+                </div>
+                <div class="cerrar-modal"><button id="cerrar"><i class="fa-lq fas fa-times"></i></i></button></div>
+        </div>
+        <script src="https://contenidos.coipomedia.com/cdn/proyectos/js/whatsapp-flotante-agentes.js"></script>
 </body>
