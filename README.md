@@ -9,5 +9,5 @@ Versiones:<br>
  <br>
  -Versión Modal (Este agrega el botón de whatsapp, que al presionar, abre un modal con un input, en dónde pueden escribir un mensaje y al darle enviar, este redirige a whatsapp con el texto ya añadidio)
  <br>
- Ver demos en https://dev.coipomedia.com/#btn-whatsapp<br>
+ Ver demos en www.coipomedia.com/dev<br>
  Si tienes dudas, escribe a webmaster@coipomedia.com
