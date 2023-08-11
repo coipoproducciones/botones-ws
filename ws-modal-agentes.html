@@ -1,14 +1,9 @@
-<!---Desarrollado por Coipo Producciones--->
-<!---Ver demos en dev.coipomedia.com/desarrollo/btn-whatsapp/demos.html-->
 <!--IMPORTANTE - LEER--->
 <!---El Javascript utilizado se encuentra en nuestro hosting, puedes usarlo así, pero te recomendamos tenerlo localmente en tu web, para así evitar posibles conflictos.
-Para ello, copia el "src" de la etiqueta script al final del body y copialo en un archivo personalizado en tu hosting--->
-<head>
-    <link rel="stylesheet" type="text/css" href="https://contenidos.coipomedia.com/cdn/proyectos/css/btn-wa-agentes.css">
-    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
-</head>
+Para ello, copia el "src" de la etiqueta script al final del body y copialo en un archivo personalizado en tu hosting - HACE LO MISMO CON EL CSS--->
+<head><link rel="stylesheet" type="text/css" href="https://repositorios.appsweb.click/repo/btn-ws-multiagente/btn-ws-multiagente.css"></head>
 <body class="body-ws">
-    <button id="abrir" style=" position: fixed !important; bottom: 40px; right: 40px;" class="button-ws"><i class="fab fa-whatsapp icon-ws fa-2x"></i></button>
+    <button id="abrir" style=" position: fixed !important; bottom: 40px; right: 40px;" class="button-ws"><svg class="whatsapp" enable-background="new 0 0 24 24" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg"><path  fill="currentcolor" d="m20.52 3.449c-2.28-2.204-5.28-3.449-8.475-3.449-9.17 0-14.928 9.935-10.349 17.838l-1.696 6.162 6.335-1.652c2.76 1.491 5.021 1.359 5.716 1.447 10.633 0 15.926-12.864 8.454-20.307z" fill="#eceff1"/><path  d="m12.067 21.751-.006-.001h-.016c-3.182 0-5.215-1.507-5.415-1.594l-3.75.975 1.005-3.645-.239-.375c-.99-1.576-1.516-3.391-1.516-5.26 0-8.793 10.745-13.19 16.963-6.975 6.203 6.15 1.848 16.875-7.026 16.875z" fill="#4caf50"/><path d="m17.507 14.307-.009.075c-.301-.15-1.767-.867-2.04-.966-.613-.227-.44-.036-1.617 1.312-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.293-.506.32-.578.878-1.634.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.576-.05-.997-.042-1.368.344-1.614 1.774-1.207 3.604.174 5.55 2.714 3.552 4.16 4.206 6.804 5.114.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345z" fill="#fafafa"/></svg></button>
         <div class="modal" id="modal_contenedor">
                 <div class="title">
                 <h2>Comunícate con nosotros.</h2>
@@ -18,7 +13,7 @@ Para ello, copia el "src" de la etiqueta script al final del body y copialo en u
                 <div class="agente-ws"><button onclick="window.location.href='https://wa.me/[numero]'"><i class="fa-lg fas fa-hand-point-right icon-agente"></i><b>Agente 2</b></button></div>
                 <div class="agente-ws"><button onclick="window.location.href='https://wa.me/[numero]'"><i class="fa-lg fas fa-hand-point-right icon-agente"></i><b>Agente 3</b></button></div>
                 </div>
-                <div class="cerrar-modal"><button id="cerrar"><i class="fa-lq fas fa-times"></i></i></button></div>
+                <div class="cerrar-modal"><button id="cerrar"><svg class="whatsapp" enable-background="new 0 0 24 24" height="10px" viewBox="0 0 12 12" width="10px" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="11" x2="11" y2="1" stroke="black" stroke-width="2"/> <line x1="1" y1="1" x2="11" y2="11" stroke="black" stroke-width="2"/></svg></button></div>
         </div>
         <script src="https://contenidos.coipomedia.com/cdn/proyectos/js/whatsapp-flotante-agentes.js"></script>
 </body>
